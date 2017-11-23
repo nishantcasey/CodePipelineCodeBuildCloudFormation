@@ -1,8 +1,10 @@
-version: 0.1
+version: 0.2
 phases:
   install:
     commands:
-      - apt-get install zip -y
+      - echo Entered the install phase...
+      - apt-get update -y
+      - apt-get install -y zip
   post_build:
     commands:
       - zip templates.zip ./templates/* 
