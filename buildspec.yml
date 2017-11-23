@@ -2,12 +2,12 @@ version: 0.2
 phases:
   install:
     commands:
-      - env
       - echo Entered the install phase...
       - apt-get update -y
       - apt-get install -y zip
   post_build:
     commands:
+      - echo $CODEBUILD_RESOLVED_SOURCE_VERSION > templates/commit_id
       - ls -lart
       - zip templates.zip ./templates/* 
       - aws s3 cp --acl public-read templates.zip s3://cnishant-cfn-test/templates.zip
