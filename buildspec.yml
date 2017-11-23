@@ -2,6 +2,7 @@ version: 0.2
 phases:
   install:
     commands:
+      - env
       - echo Entered the install phase...
       - apt-get update -y
       - apt-get install -y zip
