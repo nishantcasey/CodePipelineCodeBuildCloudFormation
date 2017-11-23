@@ -8,4 +8,4 @@ phases:
   post_build:
     commands:
       - zip templates.zip ./templates/* 
-      - aws s3 cp --recursive --acl public-read ./templates.zip s3://cnishant-cfn-test/templates.zip
+      - aws s3 cp --acl public-read templates.zip s3://cnishant-cfn-test/templates.zip
