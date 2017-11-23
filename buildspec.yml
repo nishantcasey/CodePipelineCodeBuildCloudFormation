@@ -1,6 +1,5 @@
 version: 0.1
-  phases:
-    post_build:
-      commands:
-        - aws s3 cp --recursive --acl public-read ./templates s3://cnishant-cfn-test/templates
-
+phases:
+  post_build:
+    commands:
+      - aws s3 cp --recursive --acl public-read ./templates s3://cnishant-cfn-test/templates
