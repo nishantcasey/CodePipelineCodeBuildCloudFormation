@@ -10,5 +10,5 @@ Resources:
         - 
           Namespace: "aws:autoscaling:launchconfiguration"
           OptionName: EC2KeyName
-          Value: ubKP
+          Value: newKey
       VersionLabel: "Sample Application"

@@ -7,5 +7,6 @@ phases:
       - apt-get install -y zip
   post_build:
     commands:
+      - ls -lart
       - zip templates.zip ./templates/* 
       - aws s3 cp --acl public-read templates.zip s3://cnishant-cfn-test/templates.zip

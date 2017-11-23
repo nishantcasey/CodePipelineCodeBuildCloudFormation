@@ -1,4 +1,4 @@
 <?php
-echo "Hello From the Pipeline";
+echo "Hello From the new thingy Pipeline";
 ?>
 
