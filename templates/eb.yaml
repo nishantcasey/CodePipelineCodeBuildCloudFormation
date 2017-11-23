@@ -1,0 +1,14 @@
+Resources:
+  Environment:
+    Type: "AWS::ElasticBeanstalk::Environment"
+    Properties: 
+      ApplicationName: "a-b-c"
+      Description: "AWS Elastic Beanstalk Environment running Python Sample Application"
+      EnvironmentName: SamplePythonEnvironment
+      SolutionStackName: "64bit Amazon Linux 2017.09 v2.6.0 running PHP 5.4"
+      OptionSettings: 
+        - 
+          Namespace: "aws:autoscaling:launchconfiguration"
+          OptionName: EC2KeyName
+          Value: ubKP
+      VersionLabel: "Sample Application"
